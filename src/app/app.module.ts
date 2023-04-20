@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { BooklistComponent } from './booklist/booklist.component';
 import { FooterComponent } from './footer/footer.component';
+import { FreeApiComponent } from './free-api/free-api.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     SidebarComponent,
     BooklistComponent,
-    FooterComponent
+    FooterComponent,
+    FreeApiComponent
   ],
   imports: [
     BrowserModule
