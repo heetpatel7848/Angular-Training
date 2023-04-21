@@ -6,7 +6,6 @@ import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BooklistComponent } from './booklist/booklist.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
 
 
 
