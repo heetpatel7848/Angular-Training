@@ -1,18 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-
 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BooklistComponent } from './booklist/booklist.component';
-
-
+import { AppComponent } from '../app.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    SidebarComponent,
+    BooklistComponent,
+    FooterComponent,
+  ],
+  imports: [CommonModule],
+  exports: [
+    HeaderComponent,
+    SidebarComponent,
+    BooklistComponent,
+    FooterComponent,
+  ],
 })
-export class CoreModule { }
+export class CoreModule {}
