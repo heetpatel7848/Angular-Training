@@ -1,0 +1,62 @@
+<form (ngSubmit)="onSubmit()" #f="ngForm">
+  <label for="email">Email:</label>
+  <input
+    type="email"
+    id="email"
+    name="email"
+    required
+    ngModel
+    name="email"
+  /><br />
+
+  <span> * </span>
+
+  <label for="password">Password:</label>
+  <input
+    type="password"
+    id="password"
+    name="password"
+    required
+    ngModel
+    name="password"
+  /><br />
+
+  <label for="location">Location:</label>
+  <select id="location" name="location" ngModel name="location">
+    <option value="new-york">New York</option>
+    <option value="los-angeles">Los Angeles</option>
+    <option value="chicago">Chicago</option>
+    <option value="houston">Houston</option></select
+  ><br />
+
+  <label>Gender:</label>
+  <input type="radio" id="male" name="gender" value="male" ngModel />
+  <label for="male">Male</label>
+  <input type="radio" id="female" name="gender" value="female" ngModel />
+  <label for="female">Female</label>
+  <input type="radio" id="other" name="gender" value="other" />
+  <label for="other">Other</label><br />
+
+  <input type="checkbox" id="remember-me" name="remember-me" />
+  <label for="remember-me" ngModel name="remember">Remember me </label><br />
+
+  <input type="submit" [disabled]="!f.valid" value="Submit" />
+
+  <button type="button" value="reset" (click)="resetform()">Reset</button>
+
+  <button type="button" (click)="setValueMethod()">
+    Fill form using Set Value method
+  </button>
+
+  <button type="button" (click)="patchValueMethod()">
+    Fill form using Set Patch method
+  </button>
+
+  <div class="data" *ngIf="submitted">
+    <h4>your data</h4>
+    <p>Email Id : {{ user.email }}</p>
+    <p>Password : {{ user.password }}</p>
+    <p>Gender : {{ user.gender }}</p>
+    <p>Location : {{ user.location }}</p>
+  </div>
+</form>
