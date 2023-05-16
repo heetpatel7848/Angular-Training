@@ -15,6 +15,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { DemoComponent } from './demo/demo.component'
 import { HttpClientModule } from '@angular/common/http';
+import { PipeComponent } from './pipe/pipe.component';
+import { CustompipePipe } from './custompipe.pipe';
 
 
 const appRoutes: Routes = [
@@ -40,6 +42,8 @@ const appRoutes: Routes = [
     ProductComponent,
     ReactiveformComponent,
     DemoComponent,
+    PipeComponent,
+    CustompipePipe,
   ],
   imports: [BrowserModule, HttpClientModule, ComponentTaskModule, FormsModule, RouterModule.forRoot(appRoutes), ReactiveFormsModule],
   providers: [],
