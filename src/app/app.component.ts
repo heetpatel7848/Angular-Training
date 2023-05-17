@@ -7,9 +7,15 @@ import { DataService } from './data.service';
   styleUrls: ['./app.component.scss'],
   providers: [DataService]
 })
-export class AppComponent {
-  title = 'book-shop'
+export class AppComponent implements OnInit {
 
+  constructor() { }
+
+  ngOnInit(): void {
+
+  }
+
+  title = 'book-shop'
 
   // myObservable = new Observable((observer) => {
   //   console.log('Observable starts');

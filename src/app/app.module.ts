@@ -23,6 +23,8 @@ import { DataService } from './data.service';
 import { Comp2Component } from './comp2/comp2.component';
 import { ShomeComponent } from './shome/shome.component';
 import { SheaderComponent } from './sheader/sheader.component';
+import { RxjsOperatorsComponent } from './rxjs-operators/rxjs-operators.component';
+import { RxjsOperatorsService } from './rxjs-operators.service';
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'products', component: ProductComponent },
@@ -51,10 +53,11 @@ const appRoutes: Routes = [
     Comp1Component,
     Comp2Component,
     ShomeComponent,
-    SheaderComponent
+    SheaderComponent,
+    RxjsOperatorsComponent
 
   ],
-  imports: [BrowserModule, Ng2SearchPipeModule, HttpClientModule, ComponentTaskModule, FormsModule, RouterModule.forRoot(appRoutes), ReactiveFormsModule],
+  imports: [BrowserModule, RxjsOperatorsService, Ng2SearchPipeModule, HttpClientModule, ComponentTaskModule, FormsModule, RouterModule.forRoot(appRoutes), ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
