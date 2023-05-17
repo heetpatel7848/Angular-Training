@@ -17,8 +17,12 @@ import { DemoComponent } from './demo/demo.component'
 import { HttpClientModule } from '@angular/common/http';
 import { PipeComponent } from './pipe/pipe.component';
 import { CustompipePipe } from './custompipe.pipe';
-
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { Comp1Component } from './comp1/comp1.component';
+import { DataService } from './data.service';
+import { Comp2Component } from './comp2/comp2.component';
+import { ShomeComponent } from './shome/shome.component';
+import { SheaderComponent } from './sheader/sheader.component';
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'products', component: ProductComponent },
@@ -44,8 +48,13 @@ const appRoutes: Routes = [
     DemoComponent,
     PipeComponent,
     CustompipePipe,
+    Comp1Component,
+    Comp2Component,
+    ShomeComponent,
+    SheaderComponent
+
   ],
-  imports: [BrowserModule, HttpClientModule, ComponentTaskModule, FormsModule, RouterModule.forRoot(appRoutes), ReactiveFormsModule],
+  imports: [BrowserModule, Ng2SearchPipeModule, HttpClientModule, ComponentTaskModule, FormsModule, RouterModule.forRoot(appRoutes), ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
